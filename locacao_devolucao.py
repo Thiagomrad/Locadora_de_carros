@@ -10,8 +10,9 @@ dias_locacao = 5
 data_inicio = datetime(ano_inicio,mes_inicio,dia_inicio)
 data_fim = data_inicio + timedelta(days= dias_locacao)
 
+# teste temporário
+
 for veiculo in utilitario:
     print(veiculo.modelo)
 for veiculo in esportivo:
     print(veiculo.modelo)
-
