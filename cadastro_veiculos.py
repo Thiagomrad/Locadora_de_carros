@@ -4,7 +4,7 @@ from veiculos import VeiculosEsportivos, VeiculosUtilitarios
 
 uno = VeiculosUtilitarios('GRG-2000',2006,'Prata','Uno',110000,60.00,5,2.2,8.2)
 celta= VeiculosUtilitarios('BTU-1750',2003,'Preto','Celta',135120,50.00,5,1.8,7.6)
-gol = VeiculosUtilitarios('DSI-6226',2010,'Vermelho','Gol-G5',90122,70.00)
+gol = VeiculosUtilitarios('DSI-6226',2010,'Vermelho','Gol-G5',90122,70.00,5,2.0,8.5)
 
 #esportivos
 
