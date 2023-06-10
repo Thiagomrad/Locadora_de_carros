@@ -8,13 +8,13 @@ gol = VeiculosUtilitarios('DSI-6226',2010,'Vermelho','Gol-G5',90122,70.00,5,2.0,
 
 #esportivos
 
-citroen_c4 = VeiculosEsportivos('CSL-2241',2015,'Prata',' C4 Lounge Tendance',60213,120.00,214,8.8,'motor v8')
+citroen_c4 = VeiculosEsportivos('CSL-2241',2015,'Prata','C4 Lounge Tendance',60213,120.00,214,8.8,'motor v8')
 mercedes = VeiculosEsportivos('TRI-7365',2008,'Preto','Mercedes-Benz C200 Kompressor Classic',96523,130.00,225,9,'Trasmissão melhorada')
 
 #Lists
 
-esportivo = []
-utilitario = []
+esportivo:list[VeiculosEsportivos] = []
+utilitario:list[VeiculosUtilitarios] = []
 
 def cadastrar_veiculo(veiculo:VeiculosEsportivos | VeiculosUtilitarios):
     try:
