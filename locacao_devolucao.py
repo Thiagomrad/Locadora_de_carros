@@ -3,7 +3,6 @@ from cadastro_veiculos import utilitario,esportivo
 from cadastro_clientes import clientes
 from reserva import Reserva
 
-
 nome_cliente = input('Digite o nome do cliente: ')
 modelo_veiculo = input('Digite o modelo do veículo: ')
 
