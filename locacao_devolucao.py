@@ -3,8 +3,9 @@ from cadastro_veiculos import utilitario,esportivo
 from cadastro_clientes import clientes
 from reserva import Reserva
 
-nome_cliente = input('Digite o nome do cliente: ')
+
 modelo_veiculo = input('Digite o modelo do veículo: ')
+nome_cliente = input('Digite o nome do cliente: ')
 
 dia_inicio = 8
 mes_inicio = 6
@@ -17,7 +18,7 @@ data_fim = data_inicio + timedelta(days= dias_locacao)
 def verificar_cliente(nome):
     for cliente in clientes:
         if cliente.nome == nome:
-            return True
+            return cliente
     return False
 
 #verificar se carro está cadastrado
@@ -25,22 +26,23 @@ def verificar_cliente(nome):
 def verificar_veiculo(modelo):
     for veiculo in utilitario:
         if veiculo.modelo == modelo:
-            return True
+            return veiculo
     for veiculo in esportivo:
         if veiculo.modelo == modelo:
-            return True
+            return veiculo
     return False
 
 #criar uma reserva
 # colocar o veiculo e o cliente em uma variavel
 
 reservas: list[Reserva] = []
-verificar_veiculo_um = verificar_veiculo(nome_cliente)
-verificar_cliente_um = verificar_cliente(modelo_veiculo)
+veiculo_verificado = verificar_veiculo(modelo_veiculo)
+cliente_verificado = verificar_cliente(nome_cliente)
 
-'''
-if verificar_cliente_um is True and verificar_veiculo_um is True:
-    reservas.append(
-        Reserva
-    )
-'''
+
+if cliente_verificado is not False and veiculo_verificado is not False:
+    reserva_um = Reserva(1001,cliente_verificado,veiculo_verificado,data_inicio,data_fim)
+    reservas.append(reserva_um)
+
+for reserva in reservas:
+    print(reserva.codigo,reserva.cliente.nome,reserva.veiculo.modelo)
