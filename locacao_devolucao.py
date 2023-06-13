@@ -45,4 +45,6 @@ if cliente_verificado is not False and veiculo_verificado is not False:
     reservas.append(reserva_um)
 
 for reserva in reservas:
-    print(reserva.codigo,reserva.cliente.nome,reserva.veiculo.modelo)
+    print(reserva)
+    print('Data inicial: ',reserva.data_inicio.strftime('%d/%m/%Y'))
+    print('Data final: ',data_fim.strftime('%d/%m/%Y'))

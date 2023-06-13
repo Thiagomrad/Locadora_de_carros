@@ -14,6 +14,10 @@ class Reserva:
     @property
     def prazo(self):
         return self.data_fim - self.data_inicio
+    
+    @property
+    def dias_restantes(self):
+        return self.data_fim.day - datetime.now().day
 
     @property
     def ativar(self):
@@ -28,3 +32,7 @@ class Reserva:
     @property
     def tipo_veiculo(self):
         return type(self.veiculo)
+    
+    def __repr__(self):
+        class_name = type(self).__name__
+        return f'{class_name}: (código = {self.codigo},\n cliente = {self.cliente.nome}, \n veículo = {self.veiculo.modelo})'
